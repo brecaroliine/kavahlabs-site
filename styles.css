@@ -70,6 +70,10 @@ nav a{color:var(--muted);text-decoration:none}nav a:hover{color:var(--ink)}
 .plans{display:grid;grid-template-columns:repeat(auto-fit,minmax(200px,1fr));gap:18px;margin-top:40px}
 .plan{background:var(--card);border:1px solid var(--line);border-radius:20px;padding:24px;display:flex;flex-direction:column;gap:14px}
 .plan ul{margin:0;padding-left:18px;color:var(--muted);display:flex;flex-direction:column;gap:6px;font-size:.95rem}
+.price{margin-top:auto;border-top:1px solid var(--line);padding-top:14px;color:var(--muted);font-size:.92rem;line-height:1.5}
+.price b,.combo-price b{color:var(--gold);font-weight:600}
+.combo-price{font-size:1.15rem;color:var(--ink)}
+.plan ul{flex:1}
 .combo{margin-top:18px;border:1px solid rgba(227,194,122,.45);border-radius:24px;padding:clamp(24px,4vw,44px);display:grid;grid-template-columns:1.2fr .8fr;gap:32px;align-items:center;background:radial-gradient(ellipse at 0% 0%,#221D12,var(--card) 60%)}
 .combo h3{font-family:var(--display);font-weight:500;font-size:clamp(1.5rem,3vw,2.1rem);margin:10px 0}
 .combo p{color:var(--muted)}
