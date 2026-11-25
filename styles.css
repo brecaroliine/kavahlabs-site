@@ -27,6 +27,9 @@ a{color:inherit}
 
 .top{position:sticky;top:0;z-index:20;background:rgba(8,8,10,.85);backdrop-filter:blur(12px);border-bottom:1px solid var(--line)}
 .bar{display:flex;align-items:center;justify-content:space-between;gap:20px;padding-block:14px}
+.brand-link{display:flex;align-items:center;gap:10px;text-decoration:none}
+.brand-link img{width:36px;height:36px;border-radius:8px}
+.logo-big{width:100%;max-width:420px;height:auto;border-radius:20px;border:1px solid var(--line)}
 .brand{font-family:var(--display);font-weight:300;letter-spacing:.32em;font-size:1.05rem;text-decoration:none;background:linear-gradient(180deg,#fff,#AEB2B9 55%,#F2F3F5);-webkit-background-clip:text;background-clip:text;color:transparent}
 .brand small{font-family:var(--body);font-size:.62rem;letter-spacing:.4em;color:var(--gold);-webkit-text-fill-color:var(--gold);margin-left:4px}
 nav{display:flex;gap:26px;font-size:.94rem}
