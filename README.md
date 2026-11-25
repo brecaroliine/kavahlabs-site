@@ -6,8 +6,8 @@ Site da Kavah Labs (kavahlabs.com), em inglês (principal) e português.
 
 - `index.html` — a página inteira. Cada texto aparece duas vezes: `<span lang="en">` e `<span lang="pt">`. Para mudar um texto, mude nos dois.
 - `styles.css` — cores, fontes e layout (preto, prata e dourado).
-- `app.js` — o botão EN/PT e os botões de WhatsApp. O número fica na linha `WHATSAPP`.
-- `favicon.svg` — o ícone da aba (provisório, até a logo final).
+- `app.js` — o botão EN/PT (o site abre sempre em inglês; o português só aparece se a pessoa tocar no botão) e os botões de WhatsApp. O número fica na linha `WHATSAPP`.
+- `assets/` — logo, ícones e imagem de compartilhamento.
 
 ## Publicação
 

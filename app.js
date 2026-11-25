@@ -4,12 +4,14 @@
   var root = document.documentElement;
 
   function savedLang() {
-    try { return localStorage.getItem("kavah-lang"); } catch (e) { return null; }
+    try { return localStorage.getItem("kavah-lang-choice"); } catch (e) { return null; }
   }
-  function setLang(lang) {
+  function setLang(lang, remember) {
     root.setAttribute("data-lang", lang);
     root.setAttribute("lang", lang === "pt" ? "pt-BR" : "en");
-    try { localStorage.setItem("kavah-lang", lang); } catch (e) {}
+    if (remember) {
+      try { localStorage.setItem("kavah-lang-choice", lang); } catch (e) {}
+    }
     updateLinks();
   }
   function current() { return root.getAttribute("data-lang") || "en"; }
@@ -27,12 +29,11 @@
     });
   }
 
-  // Idioma: o salvo pela pessoa, senão português para quem usa o navegador em português, senão inglês
-  var start = savedLang() || ((navigator.language || "").toLowerCase().indexOf("pt") === 0 ? "pt" : "en");
-  setLang(start);
+  // Idioma: inglês sempre, a não ser que a pessoa tenha escolhido português no botão
+  setLang(savedLang() === "pt" ? "pt" : "en", false);
 
   document.getElementById("lang").addEventListener("click", function () {
-    setLang(current() === "en" ? "pt" : "en");
+    setLang(current() === "en" ? "pt" : "en", true);
   });
 
   // Formulário de contato: abre o WhatsApp com a mensagem pronta
